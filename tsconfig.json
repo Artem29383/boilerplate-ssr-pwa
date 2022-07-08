@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react",
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"],
+      "@types": ["src/types"],
+      "@config": ["src/config/index"],
+      "@models": ["src/models/index"],
+      "models/*": ["src/models/*"],
+      "utils/*": ["src/utils/*"],
+      "api/*": ["src/api/*"],
+      "routes/*": ["src/routes/*"],
+      "hooks/*": ["src/hooks/*"],
+      "config/*": ["src/config/*"],
+      "store/*": ["src/store/*"],
+      "pages/*": ["src/pages/*"],
+      "components/*": ["src/components/*"],
+      "data/*": ["src/data/*"],
+      "styles/*": ["src/styles/*"],
+      "images/*": ["src/assets/images/*"],
+      "backgrounds/*": ["src/assets/backgrounds/*"],
+      "assets/*": ["src/assets/*"],
+      "stubs/*": ["src/stubs/*"],
+      "layouts/*": ["src/layouts/*"],
+      "yandex/*": ["src/yandex/*"],
+      "structures/*": ["src/structures/*"]
+    }
+  },
+  "include": ["src", "tools", "./global.d.ts", "./jest.config.js", "config"],
+  "exclude": ["node_modules", "types"]
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'CabinBold';
+  src: url(b1e883d65ac2b4ef64ed1ab28e29ab63.woff) format('woff');
+  font-weight: 700;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'CabinMedium';
+  src: url(b933f5f7f3a4189f663462a39ce985c5.woff) format('woff');
+  font-weight: 500;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'CabinRegular';
+  src: url(59ca528bc56d4228d3b9fd11bfcca842.woff) format('woff');
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaLight';
+  src: url(7d6c10ff1a683c304f1709bda1815a94.woff) format('woff');
+  font-weight: 300;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaRegular';
+  src: url(d255c3ec15fbb3290d50ef7208c91538.woff) format('woff');
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaMedium';
+  src: url(bb4a72508620602fc8882f07b777dc81.woff) format('woff');
+  font-weight: 500;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaBold';
+  src: url(2ddbea4806c184d186fa0d32d6fca280.woff) format('woff');
+  font-weight: 700;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaExtraBold';
+  src: url(136101cefd5f94f6604647074e7ef11c.woff) format('woff');
+  font-weight: 900;
+  font-display: block;
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'CabinBold';
+  src: url(src/styles/fonts/Cabin/Cabin-Bold.woff) format('woff');
+  font-weight: 700;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'CabinMedium';
+  src: url(src/styles/fonts/Cabin/Cabin-Medium.woff) format('woff');
+  font-weight: 500;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'CabinRegular';
+  src: url(src/styles/fonts/Cabin/Cabin-Regular.woff) format('woff');
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaLight';
+  src: url(src/styles/fonts/Georama/Georama-Light.woff) format('woff');
+  font-weight: 300;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaRegular';
+  src: url(src/styles/fonts/Georama/Georama-Regular.woff) format('woff');
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaMedium';
+  src: url(src/styles/fonts/Georama/Georama-Medium.woff) format('woff');
+  font-weight: 500;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaBold';
+  src: url(src/styles/fonts/Georama/Georama-Bold.woff) format('woff');
+  font-weight: 700;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GeoramaExtraBold';
+  src: url(src/styles/fonts/Georama/Georama-ExtraBold.woff) format('woff');
+  font-weight: 900;
+  font-display: block;
+}
