@@ -5,7 +5,8 @@ import fs from 'fs';
 import store, { sagaMiddleware } from 'store/server';
 import { rootSaga } from 'models/sagas';
 import { renderStreamApp } from 'utils/SSR/renderRootApp';
-import { renderHTMLEnd, writeHtmlStart } from 'utils/SSR/renderHTML';
+import { renderToPipeableStream } from 'react-dom/server';
+import { renderFullPage } from 'src/renderFullPage';
 
 const jsFiles: Array<string> = [];
 
@@ -19,18 +20,30 @@ export default (req: Request, res: Response) => {
     const reduxState = store.getState();
     const helmetData = Helmet.renderStatic();
 
-    writeHtmlStart(res, helmetData);
-
     const appContentStream = renderStreamApp(location);
 
-    appContentStream.pipe(res, { end: false });
+    let didError = false;
 
-    appContentStream.on('end', () => {
-      const htmlEnd = renderHTMLEnd(reduxState, jsFiles);
+    const { pipe, abort } = renderToPipeableStream(appContentStream, {
+      onShellReady() {
+        // If streaming
+        console.log('onShellReady start');
+        res.statusCode = didError ? 500 : 200;
 
-      res.write(htmlEnd);
-      res.end();
+        res.send(
+          renderFullPage(appContentStream, helmetData, jsFiles, reduxState)
+        );
+
+        pipe(res);
+        console.log('onShellReady stop');
+      },
+
+      onError(x) {
+        didError = true;
+        console.error(x);
+      },
     });
+    setTimeout(abort, 5000);
   }
 
   sagaMiddleware.run(rootSaga);

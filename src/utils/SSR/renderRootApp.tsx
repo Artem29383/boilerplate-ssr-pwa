@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import App from 'src/App';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
-import { renderToNodeStream } from 'react-dom/server';
+import {renderToString} from 'react-dom/server';
 
 const jsx = (location: string) => (
   <div id="root">
@@ -19,6 +19,5 @@ const jsx = (location: string) => (
 export const renderStreamApp = (location: string) => {
   const sheet = new ServerStyleSheet();
   const root = sheet.collectStyles(jsx(location));
-
-  return sheet.interleaveWithNodeStream(renderToNodeStream(root));
+  return renderToString(sheet.collectStyles(root));
 };
